@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/locationText"
+        android:icon="@drawable/ic_location_on_black_24dp"
+        android:title="@string/location"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="10">
+
+        <menu>
+
+            <item
+                android:id="@+id/location11"
+                android:title="@string/location1"
+                app:showAsAction="never"
+                android:orderInCategory="1"/>
+            <item
+                android:id="@+id/location12"
+                android:title="@string/location2"
+                app:showAsAction="never"
+                android:orderInCategory="2"/>
+            <item
+                android:id="@+id/location13"
+                android:title="@string/location3"
+                app:showAsAction="never"
+                android:orderInCategory="3"/>
+
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/locationIcon"
+        android:title="@string/location"
+        app:showAsAction="ifRoom|withText"
+        android:orderInCategory="11">
+
+        <menu>
+
+            <item
+                android:id="@+id/location21"
+                android:title="@string/location1"
+                app:showAsAction="never"
+                android:orderInCategory="1"/>
+            <item
+                android:id="@+id/location22"
+                android:title="@string/location2"
+                app:showAsAction="never"
+                android:orderInCategory="2"/>
+            <item
+                android:id="@+id/location23"
+                android:title="@string/location3"
+                app:showAsAction="never"
+                android:orderInCategory="3"/>
+
+        </menu>
+
+    </item>
+
+</menu>

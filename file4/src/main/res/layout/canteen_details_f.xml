@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.canteen.canteenDetails">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/collapsing_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:collapsedTitleTextAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:toolbarId="@id/toolbarCollapsed"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/canteenImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/coffee_foreground"
+                android:scaleType="centerCrop"
+                android:transitionName="canteenImage"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarCollapsed"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"/>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/canteen_r_view"
+        android:paddingBottom="?attr/actionBarSize"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

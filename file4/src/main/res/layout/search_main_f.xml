@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarCollapsed">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:expandedTitleTextAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            app:collapsedTitleTextAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:layout_margin="10dp"
+            app:title="Search Results"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:expandedTitleGravity="center|bottom"
+            app:collapsedTitleGravity="start|bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/editText"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_margin="10dp"
+                    android:theme="@style/ThemeOverlay.MaterialComponents.Dark">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/text_input_edit_text_filled"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/title_search"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Search Suggestions"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Item 1"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Item 2"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Item 3"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Item 4"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:paddingBottom="?attr/actionBarSize"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/canteen_d_layout_list" />
+
+            <include layout="@layout/canteen_d_layout_list" />
+
+            <include layout="@layout/canteen_d_layout_list" />
+
+            <include layout="@layout/canteen_d_layout_list" />
+
+            <include layout="@layout/canteen_d_layout_list" />
+
+            <include layout="@layout/canteen_d_layout_list" />
+
+            <include layout="@layout/canteen_d_layout_list" />
+
+            <include layout="@layout/canteen_d_layout_list" />
+
+            <include layout="@layout/canteen_d_layout_list" />
+
+            <include layout="@layout/canteen_d_layout_list" />
+
+            <include layout="@layout/canteen_d_layout_list" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

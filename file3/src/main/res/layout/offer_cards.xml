@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardViewLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_height="match_parent"
+        android:layout_width="300dp"
+        android:layout_margin="10dp"
+        app:cardElevation="@dimen/cardView_elevation">
+
+        <ImageView
+            android:id="@+id/imageViewCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:contentDescription="@string/image_des"
+            android:src="@mipmap/offers_foreground" />
+
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

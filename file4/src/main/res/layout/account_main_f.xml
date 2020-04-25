@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarCollapsed">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:expandedTitleGravity="center|bottom"
+            app:expandedTitleTextAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            app:collapsedTitleTextAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:title="Account Name">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/accountsToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:layout_collapseMode="pin"/>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:paddingBottom="?attr/actionBarSize"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <include layout="@layout/account_cards" />
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/primaryDarkColor"
+        app:layout_anchor="@id/toolbarCollapsed"
+        app:layout_anchorGravity="center"
+        app:maxImageSize="125dp"
+        app:srcCompat="@drawable/account_primary_light"
+        app:fabCustomSize="125dp"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
